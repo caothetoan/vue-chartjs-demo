@@ -1,24 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <AreaChart />
+    <PieChart />
+    <BarChart />
+    <RadarChart />
+    <LineChart />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AreaChart from "./components/AreaChart.vue";
+import PieChart from "./components/PieChart.vue";
+import BarChart from "./components/BarChart.vue";
+import RadarChart from "./components/RadarChart.vue";
+import LineChart from "./components/LineChart.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    AreaChart,
+    PieChart,
+    BarChart,
+    RadarChart,
+    LineChart,
+  },
+  data() {
+    return {
+      chartData: {
+        Books: 24,
+        Magazine: 30,
+        Newspapers: 10,
+      },
+    };
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
